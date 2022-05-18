@@ -1,0 +1,236 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang16393{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 6.3.9600}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qr\f0\fs22\lang9\par
+
+\pard\sa200\sl276\slmult1\qc\ul\b EXPERIMENT 2\par
+
+\pard\sa200\sl276\slmult1\qr\ulnone -ALAMEEN \par
+ROLL NO :09\par
+
+\pard\sa200\sl276\slmult1\par
+1)\b0\par
+\b C:\\Windows\\system32>ipconfig\b0\par
+\par
+
+\pard\li720\sa200\sl276\slmult1 Windows IP Configuration\par
+\par
+\par
+Ethernet adapter Ethernet:\par
+\par
+   Connection-specific DNS Suffix  . :\par
+   Link-local IPv6 Address . . . . . : fe80::69fc:b33b:46cb:2cb7%3\par
+   Autoconfiguration IPv4 Address. . : 169.254.44.183\par
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0\par
+   Default Gateway . . . . . . . . . :\par
+\par
+Tunnel adapter isatap.\{E4AFECA1-8219-4EED-9869-89B60BFC73B9\}:\par
+\par
+   Media State . . . . . . . . . . . : Media disconnected\par
+   Connection-specific DNS Suffix  . :\par
+
+\pard\sa200\sl276\slmult1\par
+\b 2)\par
+C:\\Windows\\system32>ipconfig\par
+\b0\par
+
+\pard\li720\sa200\sl276\slmult1 Windows IP Configuration\par
+\par
+\par
+Ethernet adapter Ethernet:\par
+\par
+   Connection-specific DNS Suffix  . :\par
+   Link-local IPv6 Address . . . . . : fe80::69fc:b33b:46cb:2cb7%3\par
+   Autoconfiguration IPv4 Address. . : 169.254.44.183\par
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0\par
+   Default Gateway . . . . . . . . . :\par
+\par
+Tunnel adapter isatap.\{E4AFECA1-8219-4EED-9869-89B60BFC73B9\}:\par
+\par
+   Media State . . . . . . . . . . . : Media disconnected\par
+   Connection-specific DNS Suffix  . :\par
+\par
+C:\\Windows\\system32>ping -n 10 172.20.20.62\par
+\par
+Pinging 172.20.20.62 with 32 bytes of data:\par
+Reply from 172.20.20.62: bytes=32 time=1ms TTL=128\par
+Reply from 172.20.20.62: bytes=32 time<1ms TTL=128\par
+Reply from 172.20.20.62: bytes=32 time<1ms TTL=128\par
+Reply from 172.20.20.62: bytes=32 time<1ms TTL=128\par
+Reply from 172.20.20.62: bytes=32 time<1ms TTL=128\par
+Reply from 172.20.20.62: bytes=32 time<1ms TTL=128\par
+Reply from 172.20.20.62: bytes=32 time<1ms TTL=128\par
+Reply from 172.20.20.62: bytes=32 time<1ms TTL=128\par
+Reply from 172.20.20.62: bytes=32 time<1ms TTL=128\par
+Reply from 172.20.20.62: bytes=32 time<1ms TTL=128\par
+\par
+Ping statistics for 172.20.20.62:\par
+    Packets: Sent = 10, Received = 10, Lost = 0 (0% loss),\par
+Approximate round trip times in milli-seconds:\par
+    Minimum = 0ms, Maximum = 1ms, Average = 0ms\par
+
+\pard\sa200\sl276\slmult1\par
+\b 3)\par
+C:\\Windows\\system32>netstat -a\par
+\b0\par
+
+\pard\li720\sa200\sl276\slmult1 Active Connections\par
+\par
+  Proto  Local Address          Foreign Address        State\par
+  TCP    0.0.0.0:135            RPG02:0                LISTENING\par
+  TCP    0.0.0.0:445            RPG02:0                LISTENING\par
+  TCP    0.0.0.0:1688           RPG02:0                LISTENING\par
+  TCP    0.0.0.0:49152          RPG02:0                LISTENING\par
+  TCP    0.0.0.0:49153          RPG02:0                LISTENING\par
+  TCP    0.0.0.0:49154          RPG02:0                LISTENING\par
+  TCP    0.0.0.0:49155          RPG02:0                LISTENING\par
+  TCP    0.0.0.0:49157          RPG02:0                LISTENING\par
+  TCP    0.0.0.0:49158          RPG02:0                LISTENING\par
+  TCP    172.20.33.156:139      RPG02:0                LISTENING\par
+  TCP    172.20.33.156:50152    static:http            TIME_WAIT\par
+  TCP    172.20.33.156:50153    static:http            TIME_WAIT\par
+  TCP    172.20.33.156:50155    static:http            TIME_WAIT\par
+  TCP    172.20.33.156:50157    a184-28-235-154:http   TIME_WAIT\par
+  TCP    172.20.33.156:50158    maa03s36-in-f3:https   ESTABLISHED\par
+  TCP    172.20.33.156:50159    maa05s28-in-f13:https  ESTABLISHED\par
+  TCP    172.20.33.156:50161    maa05s09-in-f14:https  ESTABLISHED\par
+  TCP    172.20.33.156:50162    maa03s47-in-f3:https   ESTABLISHED\par
+  TCP    172.20.33.156:50163    maa03s45-in-f3:https   ESTABLISHED\par
+  TCP    172.20.33.156:50164    a23-65-103-137:http    TIME_WAIT\par
+  TCP    172.20.33.156:50165    maa03s44-in-f14:https  ESTABLISHED\par
+  TCP    172.20.33.156:50170    si-in-f188:5228        ESTABLISHED\par
+  TCP    172.20.33.156:50171    maa03s38-in-f3:https   ESTABLISHED\par
+  TCP    172.20.33.156:50172    dns:https              ESTABLISHED\par
+  TCP    172.20.33.156:50173    dns:https              ESTABLISHED\par
+  TCP    172.20.33.156:50174    dns:https              ESTABLISHED\par
+  TCP    172.20.33.156:50177    maa03s37-in-f1:https   ESTABLISHED\par
+  TCP    172.20.33.156:50180    maa03s38-in-f3:https   ESTABLISHED\par
+  TCP    172.20.33.156:50187    20.205.248.73:https    ESTABLISHED\par
+  TCP    172.20.33.156:50188    maa03s28-in-f10:https  ESTABLISHED\par
+  TCP    [::]:135               RPG02:0                LISTENING\par
+  TCP    [::]:445               RPG02:0                LISTENING\par
+  TCP    [::]:1688              RPG02:0                LISTENING\par
+  TCP    [::]:49152             RPG02:0                LISTENING\par
+  TCP    [::]:49153             RPG02:0                LISTENING\par
+  TCP    [::]:49154             RPG02:0                LISTENING\par
+  TCP    [::]:49155             RPG02:0                LISTENING\par
+  TCP    [::]:49157             RPG02:0                LISTENING\par
+  TCP    [::]:49158             RPG02:0                LISTENING\par
+  UDP    0.0.0.0:5353           *:*\par
+  UDP    0.0.0.0:5353           *:*\par
+  UDP    0.0.0.0:5355           *:*\par
+  UDP    127.0.0.1:1900         *:*\par
+  UDP    127.0.0.1:57309        *:*\par
+  UDP    172.20.33.156:137      *:*\par
+  UDP    172.20.33.156:138      *:*\par
+  UDP    172.20.33.156:1900     *:*\par
+  UDP    [::]:5353              *:*\par
+  UDP    [::]:5355              *:*\par
+  UDP    [::1]:1900             *:*\par
+  UDP    [::1]:57308            *:*\par
+  UDP    [fe80::69fc:b33b:46cb:2cb7%3]:1900  *:*\par
+
+\pard\sa200\sl276\slmult1\par
+\b C:\\Windows\\system32>netstat -r\par
+
+\pard\li720\sa200\sl276\slmult1\b0 ===========================================================================\par
+Interface List\par
+  3...8c dc d4 52 40 34 ......Realtek PCIe GBE Family Controller\par
+  1...........................Software Loopback Interface 1\par
+  4...00 00 00 00 00 00 00 e0 Microsoft ISATAP Adapter\par
+===========================================================================\par
+\par
+IPv4 Route Table\par
+===========================================================================\par
+Active Routes:\par
+Network Destination        Netmask          Gateway       Interface  Metric\par
+          0.0.0.0          0.0.0.0       172.20.6.1    172.20.33.156     10\par
+      10.11.12.13  255.255.255.255         On-link         127.0.0.1     51\par
+        127.0.0.0        255.0.0.0         On-link         127.0.0.1    306\par
+        127.0.0.1  255.255.255.255         On-link         127.0.0.1    306\par
+  127.255.255.255  255.255.255.255         On-link         127.0.0.1    306\par
+       172.20.0.0      255.255.0.0         On-link     172.20.33.156    266\par
+    172.20.33.156  255.255.255.255         On-link     172.20.33.156    266\par
+   172.20.255.255  255.255.255.255         On-link     172.20.33.156    266\par
+        224.0.0.0        240.0.0.0         On-link         127.0.0.1    306\par
+        224.0.0.0        240.0.0.0         On-link     172.20.33.156    266\par
+  255.255.255.255  255.255.255.255         On-link         127.0.0.1    306\par
+  255.255.255.255  255.255.255.255         On-link     172.20.33.156    266\par
+===========================================================================\par
+Persistent Routes:\par
+  None\par
+\par
+IPv6 Route Table\par
+===========================================================================\par
+Active Routes:\par
+ If Metric Network Destination      Gateway\par
+  1    306 ::1/128                  On-link\par
+  3    266 fe80::/64                On-link\par
+  3    266 fe80::69fc:b33b:46cb:2cb7/128\par
+                                    On-link\par
+  1    306 ff00::/8                 On-link\par
+  3    266 ff00::/8                 On-link\par
+===========================================================================\par
+Persistent Routes:\par
+  None\par
+
+\pard\sa200\sl276\slmult1\b 4)\par
+C:\\Windows\\system32>arp -a\par
+\b0\par
+
+\pard\li720\sa200\sl276\slmult1 Interface: 172.20.33.156 --- 0x3\par
+  Internet Address      Physical Address      Type\par
+  172.20.6.1            00-1a-8c-6b-b3-da     dynamic\par
+  172.20.20.62          8c-dc-d4-3f-3c-b8     dynamic\par
+  172.20.255.255        ff-ff-ff-ff-ff-ff     static\par
+  224.0.0.2             01-00-5e-00-00-02     static\par
+  224.0.0.22            01-00-5e-00-00-16     static\par
+  224.0.0.251           01-00-5e-00-00-fb     static\par
+  224.0.0.252           01-00-5e-00-00-fc     static\par
+  224.0.1.140           01-00-5e-00-01-8c     static\par
+  239.255.255.250       01-00-5e-7f-ff-fa     static\par
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static\par
+
+\pard\sa200\sl276\slmult1\b 5)\par
+\par
+C:\\Windows\\system32>ipconfig/all\par
+\b0\par
+
+\pard\li720\sa200\sl276\slmult1 Windows IP Configuration\par
+\par
+   Host Name . . . . . . . . . . . . : RPG02\par
+   Primary Dns Suffix  . . . . . . . :\par
+   Node Type . . . . . . . . . . . . : Hybrid\par
+   IP Routing Enabled. . . . . . . . : No\par
+   WINS Proxy Enabled. . . . . . . . : No\par
+\par
+Ethernet adapter Ethernet:\par
+\par
+   Connection-specific DNS Suffix  . :\par
+   Description . . . . . . . . . . . : Realtek PCIe GBE Family Controller\par
+   Physical Address. . . . . . . . . : 8C-DC-D4-52-40-34\par
+   DHCP Enabled. . . . . . . . . . . : Yes\par
+   Autoconfiguration Enabled . . . . : Yes\par
+   Link-local IPv6 Address . . . . . : fe80::69fc:b33b:46cb:2cb7%3(Preferred)\par
+   IPv4 Address. . . . . . . . . . . : 172.20.33.156(Preferred)\par
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0\par
+   Lease Obtained. . . . . . . . . . : 18 May 2022 10:53:55\par
+   Lease Expires . . . . . . . . . . : 18 May 2022 16:53:55\par
+   Default Gateway . . . . . . . . . : 172.20.6.1\par
+   DHCP Server . . . . . . . . . . . : 172.20.6.1\par
+   DHCPv6 IAID . . . . . . . . . . . : 65843671\par
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-25-52-90-D6-8C-DC-D4-52-40-34\par
+\par
+   DNS Servers . . . . . . . . . . . : 8.8.4.4\par
+                                       4.2.2.2\par
+   NetBIOS over Tcpip. . . . . . . . : Enabled\par
+\par
+Tunnel adapter isatap.\{E4AFECA1-8219-4EED-9869-89B60BFC73B9\}:\par
+\par
+   Media State . . . . . . . . . . . : Media disconnected\par
+   Connection-specific DNS Suffix  . :\par
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter\par
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0\par
+   DHCP Enabled. . . . . . . . . . . : No\par
+   Autoconfiguration Enabled . . . . : Yes\par
+}
+ 
