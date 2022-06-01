@@ -7,12 +7,12 @@
 void reverse(char string[100],char rev[100])
 {
   int len=strlen(string),k=0;
-  for(int i=len-1;i>=0;i++)
+  for(int i=len-1;i>=0;i--)
   {
    rev[k]=string[i];
    k++;
   }
- 
+
 }
 void main()
 {
@@ -23,11 +23,11 @@ void main()
   if(servfd==-1)
    printf("\nSocket not created");
   struct sockaddr_in servaddr={0};
-  
+
   servaddr.sin_family=AF_INET;
   servaddr.sin_port=htons(8080);
   servaddr.sin_addr.s_addr=INADDR_ANY;
-  
+
   bind(servfd,(struct sockaddr*)&servaddr,sizeof(servaddr));
 
   listen(servfd,2);
@@ -39,7 +39,7 @@ void main()
   printf("choice from client1: %d\n",choice);
   if(choice==1)
   {
-   
+
     read(client1,msg,sizeof(msg));
     printf("string: %s\n",msg);
     reverse(msg,revmsg);
@@ -57,11 +57,13 @@ void main()
     newnum=pow(floatnum,1.5);
   }
 
-  
+
   int client2=accept(servfd,NULL,NULL);
-  
+
   if(client2==-1)
    printf("\n Couldn't find client");
+
+  send(client2,&choice,sizeof(choice),0);
   if(choice==1)
   {
     write(client2,revmsg,sizeof(revmsg));
@@ -69,17 +71,17 @@ void main()
   }
   if(choice==2)
   {
- 
+
     send(client2,&squared,sizeof(squared),0);
     //printf("int num: %d\n",intnum);
   }
   if(choice==3)
   {
-    
+
     send(client2,&newnum,sizeof(newnum),0);
     //printf("float num : %f\n",floatnum);
   }
-  
 
-
+ //compile with -lm at end
+  close(servfd);
 }
