@@ -1,0 +1,1 @@
+If not, the server sends appropriate message to the client. 

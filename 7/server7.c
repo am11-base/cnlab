@@ -1,4 +1,4 @@
-a#include<unistd.h>
+#include<unistd.h>
 #include<arpa/inet.h>
 #include<sys/socket.h>
 #include<stdio.h>
@@ -24,7 +24,10 @@ void main()
   }
   printf("\n Binding Successfull");
   listen(servfd,5);
-  while(1)
+  int i;
+  printf("Enter the number of clients: ");
+  scanf("%d",&i);
+  while(i>0)
   {
     int new=accept(servfd,NULL,NULL);
     if(new<0)
@@ -48,6 +51,8 @@ void main()
       }
 
     }
+    else
+     i--;
   }
 
 }

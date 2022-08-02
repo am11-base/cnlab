@@ -17,13 +17,32 @@ void main()
   if(status ==-1)
     printf("\n couldn't establish connection");
 
-  char msg[]="http://www.tkmce.ac.in";
-  send(client1,msg,sizeof(msg),0);
-  char msg1[1000];
-  recv(client1,msg1,sizeof(msg1),0);
-  printf(" received message is %s ",msg1);
+  int a[9]={0,1,2,3,4,5,6,7,8};
+  int size=3;
+  int i=0;
+  while(i!=9)
+  {
+    printf("\n Sending %d package ",i);
+    int arr[3],k=0;
+    for(int j=i;j<(i+3);j++)
+    {
+      if(j>=9)
+       break;
+      arr[k]=a[j];
+      printf("%d",arr[k]);
+      k++;
+    }
+    if(k<3)
+    {
+      for(int i=k;i<3;i++)
+       arr[i]=-1;
+    }
+    write(client1,arr,sizeof(arr));
+    int x;
+    recv(client1,&x,sizeof(x),0);
+    i=x+1;
 
+  }
   close(client1);
-
 
 }

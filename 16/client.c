@@ -21,6 +21,8 @@ void client()
   }
   else
   {
+
+    printf("\n Sending %d",i);
     send(clientfd,&msg[i],sizeof(msg[i]),0);
     i++;
 
