@@ -11,7 +11,7 @@ void main()
 
         struct sockaddr_in serveradr={0};
         serveradr.sin_family=AF_INET;
-        serveradr.sin_port=htons(8080);
+        serveradr.sin_port=htons(8090);
         serveradr.sin_addr.s_addr=INADDR_ANY;
 
         bind(server1,(struct sockaddr*)&serveradr,sizeof(serveradr));
@@ -52,7 +52,7 @@ void main()
 
                 struct sockaddr_in serveradd1;
                 serveradd1.sin_family=AF_INET;
-                serveradd1.sin_port=htons(9091+inc);
+                serveradd1.sin_port=htons(9095+inc);
                 serveradd1.sin_addr.s_addr=INADDR_ANY;
 
                 int connection=connect(server_socket2,(struct sockaddr *) &serveradd1,sizeof(serveradd1));

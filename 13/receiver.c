@@ -8,7 +8,7 @@ void main()
         char message[20];
         struct sockaddr_in server;
         server.sin_family=AF_INET;
-        server.sin_port=htons(9091);
+        server.sin_port=htons(9095);
         server.sin_addr.s_addr=INADDR_ANY;
 
 
