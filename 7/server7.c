@@ -14,8 +14,10 @@ void main()
     exit(0);
   }
   printf("\n Socket Created" );
+   int opt = 1;
+        setsockopt(servfd,SOL_SOCKET, SO_REUSEADDR|SO_REUSEPORT,&opt,sizeof(opt));
   servaddr.sin_family=AF_INET;
-  servaddr.sin_port=htons(8080);
+  servaddr.sin_port=htons(8081);
   servaddr.sin_addr.s_addr=INADDR_ANY;
   if(bind(servfd,(struct sockaddr*)&servaddr,sizeof(servaddr))<0)
   {

@@ -32,13 +32,18 @@ void main()
         }
 
 
-        char message[]={"Welcome to FTP Server.\n Enter the filename:"};
+        char message[]={"Welcome to FTP Server.\n 1.Upload 2.Download "};
         send(client1,message,sizeof(message),0);
+        int opt1;
+        recv(client1,&opt1,sizeof(opt),0);
+        char message2[]={"Enter file name : "};
+        send(client1,message2,sizeof(message2),0);
         char fname[20];
         recv(client1,fname,sizeof(fname),0);
         char content[50];
         FILE *fp;
 
+        if(opt1==2){
         fp=fopen(fname,"r");
         if(access(fname,F_OK)==0)
         {
@@ -47,7 +52,16 @@ void main()
         else
                 strcpy(content,"File not found");
         send(client1,content,sizeof(content),0);
-
+      }
+      else
+      {
+        fp=fopen(fname,"w");
+        char command[]={"Enter the file content"};
+        send(client1,command,sizeof(command),0);
+        char content[30];
+        recv(client1,content,sizeof(content),0);
+        fputs(content,fp);
+      }
 
         close(server1);
 

@@ -4,14 +4,14 @@
 #include<unistd.h>
 void main()
 {
-   char message[]="helloam11";
+   char message[]="hello,have a good day client";
    int server1=socket(AF_INET,SOCK_STREAM,0);
-   
+
    struct sockaddr_in serveradr={0};
    serveradr.sin_family=AF_INET;
-   serveradr.sin_port=htons(8080);
+   serveradr.sin_port=htons(8090);
    serveradr.sin_addr.s_addr=INADDR_ANY;
-    
+
    bind(server1,(struct sockaddr*)&serveradr,sizeof(serveradr));
 
    listen(server1,2);

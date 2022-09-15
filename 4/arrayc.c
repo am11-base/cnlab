@@ -21,8 +21,8 @@ void main()
    int msg[5]={4,1,2,3,4};
    write(clientfd,msg,sizeof(msg));
    read(clientfd,array1,sizeof(array1));
-   printf("max : %.2f\n",array1[0]);
-   printf("min : %.2f\n",array1[1]);
+   printf("max : %.2f\n",array1[1]);
+   printf("min : %.2f\n",array1[0]);
    printf("avg : %.2f",array1[2]);
 
   }

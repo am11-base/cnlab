@@ -21,7 +21,7 @@ void main()
 
     int len=sizeof(serveraddr);
 
-    sendto(client,"helloda",100,0,(struct sockaddr*)&serveraddr,len);
+    sendto(client,"helloServer",100,0,(struct sockaddr*)&serveraddr,len);
     printf("message sent to server \n");
     recvfrom(client,buffer,100,0,(struct sockaddr*)&serveraddr,&len);
 

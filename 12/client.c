@@ -63,7 +63,7 @@ int main()
         int client1=socket(AF_INET,SOCK_STREAM,0);
         struct sockaddr_in clientadr={0};
         clientadr.sin_family=AF_INET;
-        clientadr.sin_port=htons(8080);
+        clientadr.sin_port=htons(8086);
         clientadr.sin_addr.s_addr=INADDR_ANY;
 
 

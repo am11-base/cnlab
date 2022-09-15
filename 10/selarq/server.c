@@ -11,7 +11,7 @@ void main()
 
         struct sockaddr_in serveradr={0};
         serveradr.sin_family=AF_INET;
-        serveradr.sin_port=htons(8080);
+        serveradr.sin_port=htons(8084);
         serveradr.sin_addr.s_addr=INADDR_ANY;
 
         bind(server1,(struct sockaddr*)&serveradr,sizeof(serveradr));

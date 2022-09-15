@@ -15,7 +15,7 @@ void main()
   }
   printf("\n Socket Created" );
   servaddr.sin_family=AF_INET;
-  servaddr.sin_port=htons(8080);
+  servaddr.sin_port=htons(8081);
   servaddr.sin_addr.s_addr=INADDR_ANY;
 
   if(connect(clientfd,(struct sockaddr*)&servaddr,sizeof(servaddr))<0)

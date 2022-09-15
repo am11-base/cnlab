@@ -21,8 +21,8 @@ void main()
    int msg[5]={4,1,2,3,4};
    sendto(clientfd,msg,sizeof(msg),0,(struct sockaddr*)&servaddr,len);
    recvfrom(clientfd,array1,sizeof(array1),0,(struct sockaddr*)&servaddr,&len);
-   printf("max : %.2f\n",array1[0]);
-   printf("min : %.2f\n",array1[1]);
+   printf("max : %.2f\n",array1[1]);
+   printf("min : %.2f\n",array1[0]);
    printf("avg : %.2f\n",array1[2]);
 
   

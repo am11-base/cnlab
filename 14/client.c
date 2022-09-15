@@ -20,18 +20,34 @@ void main()
                 exit(0);
               }
 
-        char msg[60];
+        char msg[60],msg2[60];
+        int opt;
         recv(client1,msg,sizeof(msg),0);
         printf(" received message is %s",msg);
+        scanf("%d",&opt);
+        getchar();
+        send(client1,&opt,sizeof(opt),0);
+        recv(client1,msg2,sizeof(msg),0);
+        printf(" received message is %s",msg2);
         char name[20];
         scanf("%s",name);
+        getchar();
         send(client1,name,sizeof(name),0);
 
+
+        if(opt==2){
         char fcon[50];
         recv(client1,fcon,sizeof(fcon),0);
         printf("\n File content: ");
         printf("%s",fcon);
-
+      }
+      else
+      {
+        char writecon[20];
+        printf("\n Enter content: ");
+        fgets(writecon,20,stdin);
+        send(client1,writecon,sizeof(writecon),0);
+      }
 
         close(client1);
 
